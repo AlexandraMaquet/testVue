@@ -35,7 +35,7 @@
           <h1>TODO LIST</h1>
           <div>
             <label>Entrer une nouvelle tâche :</label> <br>
-            <input v-model="newTodo" @keyup.enter="addTodo" placeholder="Blabla">
+            <input v-model="newTodo"  @keyup.enter="addTodo" placeholder="Blabla">
             <div class="wrap-list">
               <ol class="list">
                 <li v-for="todo in todos" v-on:remove="todos.splice(index, 1)">
@@ -58,7 +58,8 @@
           text: 'ma première chose à faire'
         }, {
           text: 'ma deuxième chose à faire'
-        }]
+        }],
+        newTodo: ''
       }
     },
     methods: {
@@ -72,17 +73,18 @@
         }
       },
       delete(index) {
-        this.todos.splice(index, 1);
+        this.todos.splice(index, 1)
       }
     }
   }
 </script>
 
 <style scoped>
-h1 {
-  color: rgb(108, 128, 243);
-  text-decoration: underline;
-}
+  h1 {
+    color: rgb(108, 128, 243);
+    text-decoration: underline;
+  }
+  
   label {
     padding-bottom: 15px;
   }
