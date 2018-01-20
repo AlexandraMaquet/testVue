@@ -35,11 +35,13 @@
           <h1>TODO LIST</h1>
           <div>
             <label>Entrer une nouvelle tâche :</label> <br>
-            <input v-model="newTodo"  @keyup.enter="addTodo" placeholder="Blabla">
+            <input v-model="newTodo" @keyup.enter="addTodo" placeholder="Blabla">
             <div class="wrap-list">
               <ol class="list">
-                <li v-for="todo in todos" v-on:remove="todos.splice(index, 1)">
+                <li v-for="todo in todos">
                   <span>{{ todo.text }}</span>
+                  <button @click="remove(todo)">X</button>
+                  <!-- <button v-on:click="delete(index)">x</button> -->
                 </li>
               </ol>
             </div>
@@ -72,9 +74,12 @@
           this.newTodo = ''
         }
       },
-      delete(index) {
-        this.todos.splice(index, 1)
-      }
+      remove: function (todo) {
+       this.todos.splice(this.todos.indexOf(todo), 1)
+       }
+      /*  delete:(index) {
+         this.todos.splice(index, 1);
+       } */
     }
   }
 </script>
