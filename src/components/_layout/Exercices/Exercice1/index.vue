@@ -34,7 +34,7 @@
           <!-- ton code ici -->
           <h1>TODO LIST</h1>
           <div>
-            <label>Entrer une nouvelle tâche :</label> <br>
+            <label>Entrer une nouvelle tâche :</label>
             <input v-model="newTodo" @keyup.enter="addTodo" placeholder="Blabla">
             <div class="wrap-list">
               <ol class="list">
@@ -89,14 +89,13 @@
     color: rgb(108, 128, 243);
     text-decoration: underline;
   }
-  
-  label {
-    padding-bottom: 15px;
-  }
-  
+
   input {
-    padding: 10px;
-    border: 1px solid #2B49E9;
+    padding: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px dotted #2B49E9;
   }
   
   .list {
