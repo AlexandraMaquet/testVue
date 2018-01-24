@@ -1,11 +1,18 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <app-hola></app-hola>
+    <router-view />
   </div>
 </template>
 
 <script>
+
+import hola from '@/components/_layout/Exercices/Exercice3/_commons/hola.vue'
+
 export default {
+  components: {
+    'app-hola': hola
+  },
   name: 'app'
 }
 </script>

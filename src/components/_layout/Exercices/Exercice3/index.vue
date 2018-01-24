@@ -31,7 +31,6 @@
     <div class="separator">
     </div>
     <div class="right">
-      <!-- ton code ici -->
     </div>
   </div>
   </div>

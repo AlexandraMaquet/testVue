@@ -22,11 +22,16 @@
     <div class="next" @click="$router.push({name: 'exercice1'})">
       Commencer l'exercice
     </div>
+    
   </div>
 </template>
 
 <script>
+
+
+
 export default {
+  
   name: 'home',
   data () {
     return {
